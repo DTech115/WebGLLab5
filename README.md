@@ -75,12 +75,11 @@ Same as above.
 1. The colorful-light parts are very bright while the shadows become very dark [black].
 
 # Reflection
-1. Natural light in a scene that, irl, would already be there regardless of a main light source
-What is diffuse lighting?
-2. 
-Why do we need normal vectors?
-What role does the dot product play in lighting calculations?
-How does changing light direction affect a 3D object?
-How does changing light color affect realism?
-Which modification produced the most interesting result?
-Why do game engines automate lighting calculations?
+1. Natural light in a scene that, irl, would already be there regardless of a main light source.
+2. Matte part of lighting where a surface looks brighter next to light & darker when turned away.
+3. They tell the shader which way a surface is facing, the face orientation.
+4. The dot product measures how closely the surface normal points toward the light. A larger positive result makes the surface brighter, a negative result means it faces away and is clamped to zero.
+5. Changing the light direction changes which faces are bright & which are in shadow. As the light moves, the bright areas shift across the object.
+6. Light color tints the illuminated parts of an object. Colored light can make a scene feel more vivid or suggest a particular mood, but a color that does not fit the scene can look less realistic.
+7. The disco color produced the most interesting result because the cube's lights changed color gradually, especially where the light was brightest.
+8. Game engines automate lighting because calculating light for every visible surface is repetitive & kinda computationally intensive. Engines perform & optimize those calculations in real time so developers can focus on building the scene.
